@@ -1,0 +1,11 @@
+Concepts:
+
+    Breakpoints:
+    - We code phone first always. It stacks it as a block. The bigger the screen, it begins to flex.
+    -Tip: open the live server in the shape of a phone on the right of the screen.
+    -The smaller the screen size, content will become hidden, sizing will change and grid systems will change. Goes from flex to stack and visa versa.
+    
+    Containers:
+    -Eg of a container iadt website -> courses. 
+    -has same concept of breakpoints with the sizing. The smaller the smaller the container is visible.
+    
