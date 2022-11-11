@@ -1,11 +1,38 @@
 Concepts:
 
     Breakpoints:
-    - We code phone first always. It stacks it as a block. The bigger the screen, it begins to flex.
-    -Tip: open the live server in the shape of a phone on the right of the screen.
-    -The smaller the screen size, content will become hidden, sizing will change and grid systems will change. Goes from flex to stack and visa versa.
+        - We code phone first always. It stacks it as a block. The bigger the   screen, it begins to flex.
+        -Tip: open the live server in the shape of a phone on the right of the  screen.
+        -The smaller the screen size, content will become hidden, sizing will   change and grid systems will change. Goes from flex to stack and visa versa.
     
     Containers:
-    -Eg of a container iadt website -> courses. 
-    -has same concept of breakpoints with the sizing. The smaller the smaller the container is visible.
+        -Eg of a container iadt website -> courses. 
+        -has same concept of breakpoints with the sizing. The smaller the container     is visible.
+        -sizes xs, sm, md, lg, xl and xxl can be applied. Itll set different    breakpoints at different screen sizes. Theres "fluid" which will keep the  container the width of the screen no matter what size it is.
     
+            
+            Emmet abbriviation examples:
+    
+    .container-fluid.bg-dark.text-light.mt-5.p-3>h6{Fluid Container}+p>lorem20
+
+    .    -the FIRST dot represents creating a div.
+         -the word after (container) creates the class.
+    ~.   -adding another dot will add another class (NOT MAKE A NEW DIV)
+    >    -to make more divs inside divs we use " > "
+         -so .container>h1 would mean that we have a div with class container and a h6 inside the div.
+    {}   -we use {} to add text into h1-6. 
+         - adding lorem into p with the > because the lorem is inside the p tag.
+    +    -a + sign will make several things inside the div. So as above we add  a h6 + p into the container div
+
+
+    Grids:
+        -Create grids with container>row>col(any amount of columns)
+        -a row has 12 columns, each col divides equally (if divisible into 12) into the row.
+        -Cols have same sizes as containers: sm md and lg xl.
+        -each size can controlled manually:
+            Eg:
+            Having 3 cols in a row. Each of those cols can be control the amount of grids they take up. so it could be the first one takes up 8, the second takes 4 and the last one will take 12 or whatever but its stacked because the first 2 already take up the whole row.
+        - at each size you can control what looks like what. so in sm you can make them all stack (each is 12), then spans out to 8 and 4 at md and so on. 
+
+
+
