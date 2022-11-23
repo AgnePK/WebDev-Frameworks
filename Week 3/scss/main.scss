@@ -1,0 +1,46 @@
+//functions
+@import "../node_modules/bootstrap/scss/functions";
+
+//globals
+$enable-rounded:              false !default;
+$enable-shadows:              true !default;
+$enable-gradients:            true !default;
+
+//theme colours
+$primary:rgb(85, 135, 176);
+$secondary:rgb(45, 45, 49);
+$dark:rgb(38, 38, 38);
+$light:rgb(221, 212, 212);
+
+//mixins and variables
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+//custom colours     
+$custom-colors: (
+    "primary-light":rgb(68, 143, 205),
+    "secondary-light": rgb(86, 86, 89),
+);
+//merge map to merge my colours with theme
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@each $key ,$val in $colors{
+    .bg-#{$color}{
+        background-color: $val;
+    }
+}
+@each $color ,$val in $colors{
+    .bg-#{$color}{
+        background-color: $val;
+    }
+    .bg-#{$color}-light{
+        background-color: tint-color($val, 60%);
+    }
+}
+
+$link-color: rgb(232, 232, 79);
+
+$border-style: dashed;
+
+//Bootstrap css
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
